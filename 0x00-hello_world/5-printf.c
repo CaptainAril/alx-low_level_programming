@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-puts("\"Programming is like building a multilangual puzzle\n");
+prinf("with proper grammar, but the outcome is a piece of art,\n");
 return (0);
 }
