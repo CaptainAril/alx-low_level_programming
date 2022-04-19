@@ -8,10 +8,10 @@
 
 int main(void)
 {
-int i = 0;
-while (i < 10)
+int i = 48;
+while (i < 58)
 {
-putchar("%c", i);
+putchar(i);
 i++;
 }
 putchar("\n");
