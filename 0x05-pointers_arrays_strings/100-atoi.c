@@ -1,4 +1,4 @@
-#inclue "main.h"
+#include "main.h"
 
 /**
  * _atoi - convert a string to an integer
@@ -17,7 +17,7 @@ for (i = 0; s[i] != '\0'; i++)
 {
 if (s[i] == '-')
 sig = sig * -1;
-if (s[ig] >= '0' && s[i] <= '9')
+if (s[i] >= '0' && s[i] <= '9')
 {
 res = res * 10;
 res -= (s[i] -'0');
