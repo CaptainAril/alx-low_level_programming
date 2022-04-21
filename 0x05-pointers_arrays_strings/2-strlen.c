@@ -6,11 +6,11 @@
  * Return: void
  */
 
-int _strlen(char *s)
+int _strlen(char *str)
 {
 int i = 0;
 
-while (s[1])
+while (str[1])
 {
 i++;
 }
