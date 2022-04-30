@@ -10,7 +10,7 @@ int _strlen(char *str)
 {
 int i = 0;
 
-while (str[i] = '\n')
+while (str[1])
 {
 i++;
 }
