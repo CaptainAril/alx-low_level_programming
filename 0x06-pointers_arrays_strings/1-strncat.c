@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strncat - concatenates two strings
+ * _strncat - concatenates two strings
  * @dest: destination
  * @src: string to be copied
  * @n: amount of bytes from src used
@@ -10,7 +10,7 @@
 char *_strncat(char *dest, char *src, int n)
 {
 int i, j;
-  
+
 i = 0;
 j = 0;
 
