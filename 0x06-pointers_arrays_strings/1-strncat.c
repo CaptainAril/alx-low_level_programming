@@ -5,6 +5,7 @@
  * @dest: destination
  * @src: string to be copied
  * @n: amount of bytes from src used
+ * Return: return dest value
  */
 
 char *_strncat(char *dest, char *src, int n)
