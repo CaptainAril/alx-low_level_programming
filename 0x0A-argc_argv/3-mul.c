@@ -10,12 +10,12 @@
 
 int main(int argc, char *argv[])
 {
-if (argc < 2)
+if (argc != 3)
 {
 printf("Error\n");
 return (1);
 }
-int mul = atoi(argv[1]) * atoi(argv[2]);
-printf("%d\n", mul);
+
+printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 return (0);
 }
