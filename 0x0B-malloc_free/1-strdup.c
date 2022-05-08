@@ -20,7 +20,7 @@ len = strlen(str) + 1;
 
 if (str == NULL)
 {
-return (NULL)
+return (NULL);
 }
 
 p = malloc(sizeof(char) * len);
