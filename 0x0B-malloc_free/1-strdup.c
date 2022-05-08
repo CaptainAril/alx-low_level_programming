@@ -25,17 +25,17 @@ return (NULL);
 len = strlen(str) + 1;
 
 p = malloc(sizeof(char) * len);
+if (p == NULL)
+{
+ return (NULL);
+}
+ 
 while (i < len)
 {
 p[i] = str[i];
 i++;
 }
 p[i] = '\0';
-
-if (p == NULL)
-{
-return (NULL);
-}
 
 return (p);
 }
