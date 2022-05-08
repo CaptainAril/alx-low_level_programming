@@ -18,11 +18,6 @@ int len;
 i = 0;
 len = strlen(str) + 1;
 
-if (str == NULL)
-{
-return (NULL);
-}
-
 p = malloc(sizeof(char) * len);
 while (i < len)
 {
