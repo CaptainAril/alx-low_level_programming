@@ -18,7 +18,7 @@ int len;
 i = 0;
 len = strlen(str) + 1;
 
-p = malloc(len * sizeof(char));
+p = malloc(sizeof(char) * len);
 while (i < len)
 {
 p[i] = str[i];
