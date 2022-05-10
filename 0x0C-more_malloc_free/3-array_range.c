@@ -17,7 +17,7 @@ int len, x, i;
 
 if (min > max)
 {
-return (NULL);
+return ('\0');
 }
 
 len = 1;
@@ -29,7 +29,7 @@ len++;
 t = malloc(sizeof(int) * len);
 if (t == NULL)
 {
-return (NULL);
+return ('\0');
 }
 i = 0;
 for (x = min; !(x > max); x++)
