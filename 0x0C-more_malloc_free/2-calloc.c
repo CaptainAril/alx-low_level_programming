@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * *_calloc - allocates memory for an array using malloc
+ * _calloc - allocates memory for an array using malloc
  * @nmemb: number of array elements
  * @size: byte size of each element
  *
@@ -25,7 +25,7 @@ if (t == NULL)
 {
 return (NULL);
 }
-for (i = 0; i < nmemb; i++)
+for (i = 0; i < nmemb * size; i++)
 {
 t[i] = 0;
 }
