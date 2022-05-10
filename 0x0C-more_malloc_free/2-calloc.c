@@ -17,13 +17,13 @@ char *t;
 
 if (nmemb == 0 || size == 0)
 {
-return (NULL);
+return ('\0');
 }
 
 t == malloc(size * nmemb);
 if (t == NULL)
 {
-return (NULL);
+return ('\0');
 }
 for (i = 0; i < nmemb * size; i++)
 {
