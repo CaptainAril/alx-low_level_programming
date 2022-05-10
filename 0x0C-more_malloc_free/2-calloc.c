@@ -20,7 +20,7 @@ if (nmemb == 0 || size == 0)
 return ('\0');
 }
 
-t == malloc(size * nmemb);
+t = malloc(size * nmemb);
 if (t == NULL)
 {
 return ('\0');
