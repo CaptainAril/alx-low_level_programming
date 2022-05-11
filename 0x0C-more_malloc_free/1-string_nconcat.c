@@ -42,7 +42,7 @@ if (t == NULL)
 {
 return (NULL);
 }
-for (i = 0; s1[i] !- '\0'; i++)
+for (i = 0; s1[i] != '\0'; i++)
 {
 t[i] = s1[i];
 }
