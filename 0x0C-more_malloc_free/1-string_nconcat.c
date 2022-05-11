@@ -6,6 +6,7 @@
  * @s1: First string
  * @s2: Second string to be concatenated into first
  * @n: number of s2 bytes to be concatenated into s1
+ *
  * Return: Return pointer to s1
  * NULL if malloc fails
  */
@@ -25,11 +26,11 @@ s2 = " ";
 }
 for (i = 0; s1[i] != '\0'; i++)
 {
-;
+,
 }
 for (j = 0; s2[j] != '\0'; j++)
 {
-;
+,
 }
 
 if (n >= j)
