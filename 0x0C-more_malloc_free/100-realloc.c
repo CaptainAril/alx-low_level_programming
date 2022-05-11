@@ -43,7 +43,7 @@ return ('\0');
 }
 for (i = 0; i < old_size; i++)
 {
-*((char )new_ptr + i) = *((char *)ptr + i);
+*((char *)new_ptr + i) = *((char *)ptr + i);
 }
 
 free (ptr);
