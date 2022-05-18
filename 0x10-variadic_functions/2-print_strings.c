@@ -1,10 +1,10 @@
+#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-#include "variadic_functions.h"
 
 /**
  * print_strings - prints strings, followed by a new line
- * @sepetator: the string printed between the variadic argument strings
+ * @seperator: the string printed between the variadic argument strings
  * @n: the number of strings passed to the function
  * @...: Variable arguments/strings to be printed
  *
