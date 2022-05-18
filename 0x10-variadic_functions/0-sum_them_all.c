@@ -25,8 +25,8 @@ return (0);
 va_start(sm, n);
 for (i = 0; i < n; i++)
 {
-sum = va_arg(sm, int);
+sum += va_arg(sm, int);
 }
 va_end(sm);
-return(sum);
+return (sum);
 }
