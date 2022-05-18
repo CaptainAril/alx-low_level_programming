@@ -1,6 +1,6 @@
-#include "variadic_function.h"
+#include "variadic_functions.h"
 #include <stdio.h>
-#include <stdard.h>
+#include <stdarg.h>
 
 void print_char(va_list arg);
 void print_int(va_list arg);
@@ -16,7 +16,7 @@ void print_char(va_list arg)
 {
   char character;
 
-  letter = va_arg(arg, int);
+  character = va_arg(arg, int);
   printf("%c", character);
 }
 
@@ -77,7 +77,7 @@ void print_all(const char * const format, ...)
   va_list args;
   int i = 0, j = 0;
   char *separator = "";
-  printer_t funcs[] = {
+  printer funcs[] = {
 		       {"c", print_char},
 		       {"i", print_int},
 		       {"f", print_float},
