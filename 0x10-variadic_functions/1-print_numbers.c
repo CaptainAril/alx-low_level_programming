@@ -21,7 +21,7 @@ va_start(pn, n);
 for (i = 0; i < n; i++)
 {
 printf("%d", va_arg(pn, int));
-if (i != n - 1 && seperator != NULL)
+if (i != (n - 1) && seperator != NULL)
 {
 printf("%s", seperator);
 }
