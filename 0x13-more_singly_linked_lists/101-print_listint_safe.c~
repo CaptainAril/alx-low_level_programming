@@ -1,0 +1,16 @@
+#include "lists.h"
+
+size_t print_listint_safe(const listint_t *head)
+{
+	size_t count;
+
+	count = 0;
+
+	while (head != NULL)
+	{
+		printf("[%p] %i\n", &head, head->n);
+		head = head->next;
+		count++;
+	}
+	return (count);
+}
