@@ -11,10 +11,10 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, let_read, let_writn, expected_char;
+	int fd, let_read, let_wrtn, exptd_char;
 	char *buf;
 
-	expected_char = letters;
+	exptd_char = letters;
 
 	/* create temporary buffer */
 	buf = malloc(sizeof(char) * letters);
@@ -25,14 +25,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if ((fd = open(filename, O_CREAT | O_RDONLY)) == -1)
 		return (0);
 
-	if ((let_read = read(fd, buf, expected_char)) == -1)
+	if ((let_read = read(fd, buf, letters)) == -1)
 		return (0);
 
-	if ((let_writn = write(1, buf, expected_char)) == -1 || let_writn != expected_char)
+	if ((let_wrtn = write(1, buf, letters)) == -1 || let_wrtn != exptd_char)
 	    return(0);
 
 	close(fd);
 	free(buf);
 
-	return (let_writn);
+	return (let_wrtn);
 }
