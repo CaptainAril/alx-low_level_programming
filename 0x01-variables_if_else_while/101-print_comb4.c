@@ -14,17 +14,16 @@ int main(void)
 		for (y = 48; y < 58; y++)
 			for (z = 48; z < 58; z++)
 			{
-				if (x != y && x != z && y != z)
-					if ( x < y && x < z && y < z)
-					{
-						putchar(x);
-						putchar(y);
-						putchar(z);
-						if (x == 55 && y == 56 && z == 57)
-							break;
-						putchar(44);
-						putchar(32);
-					}
+				if ((x != y && x != z && y != z) && (x < y && x < z && y < z))
+				{
+					putchar(x);
+					putchar(y);
+					putchar(z);
+					if (x == 55 && y == 56 && z == 57)
+						break;
+					putchar(44);
+					putchar(32);
+				}
 			}
 	putchar('\n');
 	return (0);
