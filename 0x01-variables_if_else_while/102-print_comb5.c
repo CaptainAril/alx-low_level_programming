@@ -8,26 +8,33 @@
 
 int main(void)
 {
-	int a, b, c, d;
+int a, b, c, d;
 
-	for (a = 48;  a < 58; a++)
-		for (b = 48; b < 58; b++)
-			for (c = 48; c < 58; c++)
-				for (d = 48; d < 58; d++)
-					if (a <= c && b < d)
-					{
-						putchar(a);
-						putchar(b);
-						putchar(32);
-						putchar(c);
-						putchar(d);
-						if (!(a == 57 && b == 56 && c == 57 && d == 57))
-						{
-							putchar(44);
-							putchar(32);
-						}
-					}
-	putchar('\n');
+for (a = 48;  a < 58; a++)
+{
+for (b = 48; b < 58; b++)
+{
+for (c = 48; c < 58; c++)
+{
+for (d = 48; d < 58; d++)
+{
+if (((c + d) > (a + b) && c >= a) || a < c)
+{
+putchar(a);
+putchar(b);
+putchar(32);
+putchar(c);
+putchar(d);
+if (a + b + c + d == 227 && a == 57)
+break;
+putchar(44);
+putchar(32);
+}
+}
+}
+}
+}
+putchar('\n');
 
-	return (0);
+return (0);
 }
