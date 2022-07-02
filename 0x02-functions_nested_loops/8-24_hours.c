@@ -7,43 +7,22 @@
 
 void jack_bauer(void)
 {
+	int h1, h2, m1, m2, x;
+	x = 57;
 
-int h1;
-int h2;
-int m1;
-int m2;
-int a = 9;
+	for (h1 = 48; h1 < 51; h1++)
+		for (h2 = 48; h2 <= x; h2++)
+			for (m1 = 48; m1 <= 53; m1++)
+				for (m2 = 48; m2 <= 57; m2++)
+				{
+					if (h1 == 50)
+						x = 51;
+					_putchar(h1);
+					_putchar(h2);
+					_putchar(':');
+					_putchar(m1);
+					_putchar(m2);
+					_putchar('\n');
+				}
 
-h2 = 0;
-while (h2 <= 2)
-{
-if (h2 == 2)
-{
-/*Restrain to 23h, not 29*/
-a = 3;
-}
-h1 = 0;
-while (h1 <= a)
-{
-m2 = 0;
-while (m2 <= 5)
-{
-m1 = 0;
-while (m1 <= 9)
-{
-_putchar('0' + h2);
-_putchar('0' + h1);
-_putchar(':');
-_putchar('0' + m2);
-_putchar('0' + m1);
-_putchar('\n');
-m1++;
-
-}
-m2++;
-}
-h1++;
-}
-h2++;
-}
 }
