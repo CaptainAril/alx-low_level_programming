@@ -7,5 +7,11 @@
 
 int _abs(int n)
 {
-return (n >= 0 ? n : n * -1);
+	int abs = n;
+
+	if (n < 0)
+		abs *= -1;
+
+	return (abs);
+	/* return (n >= 0 ? n : n * -1); */
 }
