@@ -8,7 +8,7 @@
  * Return: the nth (index) node
  *         NULL if node does not exist
  */
-dlistin_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	for (; index != 0; index--)
 	{
