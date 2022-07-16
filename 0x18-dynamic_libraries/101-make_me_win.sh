@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc *.o -fPIC -shared -o libruin.so
-LD_PRELOAD=$PWD/libruin.so
+wget -P /tmp/ https://raw.github.com/CaptainAril/alx-low_level_programming/master/0x18-dynamic_libraries/libwin.so 
+LD_PRELOAD=$PWD/libwin.so
