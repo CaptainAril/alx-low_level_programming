@@ -21,11 +21,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	value_t = strdup(value);
 	size = ht->size;
-/*	printf("Array size -> %lu\n", size); */
 	index = key_index(key_t, size);
-/*	printf("Index -> %lu\n", index); */
-
 	head = ht->array[index];
+	
 	if (!add_node(head, (char* ) key, value_t))
 		return (0);
 
