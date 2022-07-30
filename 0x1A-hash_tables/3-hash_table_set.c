@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int size, index;
 	hash_node_t *head;
-	const unsigned char *key_t = (const unsigned char* ) key;
+	const unsigned char *key_t = (const unsigned char *) key;
 	char *value_t;
 
 	if (key[0] == '\0')
@@ -23,20 +23,29 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	size = ht->size;
 	index = key_index(key_t, size);
 	head = ht->array[index];
-	
-	if (!add_node(head, (char* ) key, value_t))
+
+	if (!add_node(head, (char *) key, value_t))
 		return (0);
 
 	return (1);
 }
 
+/**
+ * add_node - adds node to beginning of linked list
+ * @head: head of the linked list
+ * @key: key value
+ * @value: value corresponding to the key
+ *
+ * Return: Returns pointer to head of linked list;
+ *         NULL if unsuccessful
+ */
 hash_node_t *add_node(hash_node_t *head, char *key, char *value)
 {
 	hash_node_t *new_node;
 
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
-		return NULL;
+		return (NULL);
 
 	new_node->key = key;
 	new_node->value = value;
