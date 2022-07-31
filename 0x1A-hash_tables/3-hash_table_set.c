@@ -30,10 +30,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	for (i = index; ht->array[i]; i++)
 	{
-		if (ht->array[index]->key == key)
+		if (ht->array[i]->key == key)
 		{
-			free(ht->array[index]->value);
-			ht->array[index]->value = value_t;
+			free(ht->array[i]->value);
+			ht->array[i]->value = value_t;
 			return (1);
 		}
 	}
