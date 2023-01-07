@@ -1,33 +1,53 @@
 #include <stdio.h>
 
-int interpolationSearch(int arr[], int lo, int hi, int x)
-{
-	int pos;
+int binarySearch(int array[], int start, int end, int key) {
+	int mid;
 
-	if (lo <= hi && x >= arr[lo] && x <= arr[hi])
-	{
-		pos = lo + (((double)(hi - lo) / (arr[hi] - arr[lo])) * (x - arr[lo]));
-		if (arr[pos] == x)
-			return pos;
-
-		if (arr[pos] < x)
-			return interpolationSearch(arr, pos + 1, hi, x);
-		if (arr[pos] > x)
-			return interpolationSearch(arr, lo, pos - 1, x);
-
+	if (start <= end) {
+		mid = (start + (end - start) /2);
+		if (array[mid] == key)
+			return mid;
+		if (array[mid] > key)
+			return binarySearch(array, start, mid-1, key);
+		return binarySearch(array, mid+1, end, key);
 	}
 	return -1;
 }
 
 
-int main()
-{
-	int arr[] = {10, 12, 13, 16, 18, 19, 20, 21, 22, 23, 24, 33, 35, 42, 47};
-	int n = sizeof(arr) / sizeof(arr[0]);
+int exponentialSearch(int array[], int start, int end, int key) {
+	int i;
 
-	int x = 18;
-	int index = interpolationSearch(arr, 0, n-1, x);
+	if ((end - start) <= 0)
+		return -1;
+	i = 1;
+	while (i < (end - start)) {
+		if (array[i] < key)
+			i *= 2;
+		else
+			break;
+	}
+	return binarySearch(array, i/2, i, key);
+}
 
-	printf("Element %i found at %i\n", x, index);
+
+int main(){
+	int n, searchKey, loc;
+
+	printf("Enter number of items: ");
+	scanf("%d", &n);
+	int array[n];
+	printf("Enter items: ");
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &array[i]);
+	}
+	printf("Enter search key to search in the list: ");
+	scanf("%d", &searchKey);
+
+	if ((loc = exponentialSearch(array, 0, n, searchKey)) >= 0)
+		printf("Item found at location: %d\n", loc);
+	else
+		printf("Item not found in the list\n");
+	
 	return 0;
 }
