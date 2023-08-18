@@ -39,7 +39,7 @@ char *cap_string(char *str)
 	{
 		if (check_arr(c, str[i]) || i == 0)
 		{
-			if (i == 0)
+			if (i == 0 && (str[i] >= 'a' && str[i] <= 'z'))
 				str[i] -= 32;
 			else if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
 			{
