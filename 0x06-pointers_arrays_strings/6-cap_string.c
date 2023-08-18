@@ -37,7 +37,7 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i]; i++)
 	{
-		if (check_arr(c, str[i]))
+		if (check_arr(c, str[i]) || i == 0)
 		{
 			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
 			{
