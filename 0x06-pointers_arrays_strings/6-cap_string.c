@@ -1,26 +1,22 @@
 #include "main.h"
 
-
 /**
- * check_arr - checks an array for a character.
+ * str_check - checks a string for a character.
  *
- * @arr: array to check
+ * @str1: string to check
  * @c: character to check for
  *
- * Return: 1 if character is found in array, else 0
+ * Return: 1 if character is found in string, else 0
  */
-int check_arr(char arr[], char c)
+int str_check(char *str1, char c)
 {
-	int i;
-
-	for (i = 0; arr[i]; i++)
+	for (; *str1; str1++)
 	{
-		if (arr[i] == c)
+		if (*str1 == c)
 			return (1);
 	}
 	return (0);
 }
-
 
 /**
  * cap_string - capitalizes all words of a string
@@ -31,21 +27,21 @@ int check_arr(char arr[], char c)
  */
 char *cap_string(char *str)
 {
-	char c[] = {' ', '\t', '\n', ',',
-	';', '.', '!', '?', '"', '(', ')', '{', '}'};
-	int i;
+	int i, flag;
+	char *separators;
+
+	separators = " \t\n,;.!?\"{}()'";
+	flag = 1;
 
 	for (i = 0; str[i]; i++)
 	{
-		if (check_arr(c, str[i]) || i == 0)
+		if (str_check(separators, (str[i])))
+			flag = 1;
+		else
 		{
-			if (i == 0 && (str[i] >= 'a' && str[i] <= 'z'))
+			if (flag && (str[i] >= 97 && str[i] <= 122))
 				str[i] -= 32;
-			else if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
-			{
-				str[i + 1] -= 32;
-				i++;
-			}
+			flag = 0;
 		}
 	}
 	return (str);
