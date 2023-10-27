@@ -16,7 +16,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int len1, len2, index, sum, carry, num1, num2;
 
 	for (len1 = 0; n1[len1]; len1++)
-		;
+		;				
 	for (len2 = 0; n2[len2]; len2++)
 		;
 
